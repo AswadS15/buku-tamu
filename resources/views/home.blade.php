@@ -153,7 +153,7 @@
 
 {{-- SECTION 2 --}}
 <section class="pb-24">
-    <h3 class="text-center text-basa font-semibold text-3xl pb-16 pt-16">FORM LAYANAN</h3>
+    <h3 class="text-center text-basa font-semibold text-3xl pb-16 pt-16">LAYANAN</h3>
     <div>
         <form class="max-w-xl mx-auto">
             <div class="grid md:grid-cols-2 md:gap-6">
