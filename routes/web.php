@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PengunjungController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+Route::resource('pengunjung', PengunjungController::class);
