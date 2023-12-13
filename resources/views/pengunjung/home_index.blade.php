@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 
-<body>
+<body style="background-image: url('{{ asset('img/1.jpeg') }}');" class="bg-cover bg-center bg-opacity-50">
 {{-- NAVBAR --}}
     <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -16,7 +16,7 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BPKHTL-XV</span>
             </a>
             <div style="color: aliceblue" class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="text-white bg-green-700 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-green-700 rounded-lg text-lg font-bold px-4 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Get started</button>
+                <button type="button" class="text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-600 rounded-lg text-lg font-bold px-4 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Get started</button>
                 <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -46,22 +46,22 @@
 
 
 {{-- SECTION 1 --}}
-<section class= "dark:bg-gray-900 mt-8 bg-neutral-50">
+<section class= "dark:bg-gray-900 mt-8 bg-cover bg-center pb-40" >
     <div class="container mx-auto">
         <div class="py-8 md:px-40 mx-auto max-w-screen-xl sm:pt-10 ">
             <div class="mx-10 mb-8 lg:mb-16 md:text-center place-content-center border-b pt-10 pb-32">
-                <h2 class="mb-4 md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white text-3xl">SELAMAT DATANG PADA LAYANAN BUKU TAMU BPKHTL-XV</h2>
-                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                <h2 class="mb-4 md:text-4xl tracking-tight font-extrabold text-gray-100 dark:text-white text-3xl">SELAMAT DATANG PADA LAYANAN BUKU TAMU BPKHTL-XV</h2>
+                <p class="text-gray-100 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
             </div>
         </div>
     
         <div class="max-w-screen mx-auto px-5">
             <div class="grid lg:grid-cols-4 md:grid-cols-2  grid-rows-4 md:grid-rows-none gap-5 pb-28 ">
-                <div class="rounded-lg col-span-1 p-5 border shadow-md">
+                <div class="rounded-lg col-span-1 p-5 border shadow-md bg-gray-50">
                     <div class="flex justify-center  pb-5 border-b mb-4">
-                        <h3 class="font-semibold text-xl text-center text-gray-600">JUMLAH PENGUNJUNG</h3>
+                        <h3 class="font-semibold text-xl text-center text-gray-900">JUMLAH PENGUNJUNG</h3>
                     </div>
-                        <table class="text-gray-500">
+                        <table class="text-gray-900">
                             <tr class="md:text-lg text-xl">
                                 <td>Hari ini</td>
                                 <td class="md:px-10 px-16">:</td>
@@ -79,11 +79,11 @@
                             </tr>
                         </table>
                 </div>
-                <div class="rounded-lg col-span-1 p-5 border shadow-md">
+                <div class="rounded-lg col-span-1 p-5 border shadow-md bg-gray-50">
                     <div class="flex justify-center  pb-5 border-b mb-4">
-                        <h3 class="font-semibold text-xl text-center text-gray-600">GRAFIK PENGUNJUNG</h3>
+                        <h3 class="font-semibold text-xl text-center text-gray-900">GRAFIK PENGUNJUNG</h3>
                     </div>
-                        <table class="text-gray-500">
+                        <table class="text-gray-900">
                             <tr class="md:text-lg text-xl">
                                 <td>Hari ini</td>
                                 <td class="md:px-10 px-16">:</td>
@@ -101,11 +101,11 @@
                             </tr>
                         </table>
                 </div>
-                <div class="rounded-lg col-span-1 p-5 border shadow-md">
+                <div class="rounded-lg col-span-1 p-5 border shadow-md bg-gray-50">
                     <div class="flex justify-center  pb-5 border-b mb-4">
-                        <h3 class="font-semibold text-xl text-center text-gray-600">JUMLAH ULASAN</h3>
+                        <h3 class="font-semibold text-xl text-center text-gray-900">JUMLAH ULASAN</h3>
                     </div>
-                        <table class="text-gray-500">
+                        <table class="text-gray-900">
                             <tr class="md:text-lg text-xl">
                                 <td>Hari ini</td>
                                 <td class="md:px-10 px-16">:</td>
@@ -123,11 +123,11 @@
                             </tr>
                         </table>
                 </div>
-                <div class="rounded-lg col-span-1 p-5 border shadow-md">
+                <div class="rounded-lg col-span-1 p-5 border shadow-md bg-gray-50">
                     <div class="flex justify-center  pb-5 border-b mb-4">
-                        <h3 class="font-semibold text-xl text-center text-gray-600">GRAFIK ULASAN</h3>
+                        <h3 class="font-semibold text-xl text-center text-gray-900">GRAFIK ULASAN</h3>
                     </div>
-                        <table class="text-gray-500">
+                        <table class="text-gray-900">
                             <tr class="md:text-lg text-xl">
                                 <td>Hari ini</td>
                                 <td class="md:px-10 px-16">:</td>
@@ -153,8 +153,8 @@
 
 {{-- SECTION 2 --}}
 <section class="pb-24" id="form">
-    <h3 class="text-center text-basa font-semibold text-3xl pb-16 pt-16">LAYANAN</h3>
-    <div>
+    <div class="bg-gray-100 max-w-2xl mx-auto p-5 rounded-lg">
+        <h3 class="text-center text-basa font-semibold text-3xl text-gray-900 pb-10">LAYANAN</h3>
         <form class="max-w-xl mx-auto" method="post" action="/pengunjung">
             @csrf
             <div class="grid md:grid-cols-2 md:gap-6">
@@ -222,56 +222,61 @@
 {{-- END SECTION 2 --}}
 
 {{-- SECTION 3 --}}
-<section class= "dark:bg-gray-900 mt-8 bg-neutral-50">
-    <div class="container mx-auto">
-        <h3 class="text-center text-basa font-semibold text-3xl pb-16 pt-16">ULASAN PELAYANAN</h3>
+<section class= "dark:bg-gray-900 mt-40 mb-16">
+    <div class="container mx-auto">       
         <div class="max-w-screen mx-auto px-5 grid grid-cols-2 gap-10">
             <div class="cols-span-1">
-                <form action="" class="max-w-lg">
+                <form action="/pengunjung/ulasan" method="POST" class="max-w-lg bg-gray-100 p-12 mx-auto rounded-md">
+                    @csrf
+                    <h3 class="text-center text-basa font-semibold text-3xl pb-10">ULASAN PELAYANAN</h3>
                     <div class="relative z-0 mb-5 group">
-                        <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " required />
-                        <label for="floating_email" class="peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Masukan nama anda</label>
+                        <input type="text" name="nama" id="nama" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " required />
+                        <label for="nama" class="peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Masukan nama anda</label>
         
-                        <label for="message" class="mt-5 block mb-2 text-lg font-medium text-gray-600 dark:text-white">Ulasan anda</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-lg text-gray-600 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                        <label for="ulasan" class="mt-10 block mb-2 text-lg font-medium text-gray-600 dark:text-white">Ulasan anda</label>
+                        <textarea id="ulasan" name="ulasan" rows="4" class="block p-2.5 w-full text-lg text-gray-600 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
                     </div>
+                    <button type="submit" class="text-white bg-green-700 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-green-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 font-semibold mb-2">Submit</button>
                 </form>
             </div>
-            <div class="col-span-1 p-5 h-[500px] overflow-x-scroll border-l">
-                <div class="flex justify-between pb-4 pt-10">
-                    <div class="flex ">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
-                        <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+            <div class="bg-gray-100 p-10 rounded-md">
+                <div class="col-span-1 p-5 h-[500px] overflow-x-scroll border-l ">
+                    <div class="flex justify-between pb-4 pt-10">
+                        <div class="flex ">
+                            <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
+                            <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                        </div>
+                        <p class="text-lg pt-2">3 jam yang lalu</p>
                     </div>
-                    <p class="text-lg pt-2">3 jam yang lalu</p>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
-                <div class="flex justify-between pb-4 pt-10">
-                    <div class="flex ">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
-                        <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
+                    <div class="flex justify-between pb-4 pt-10">
+                        <div class="flex ">
+                            <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
+                            <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                        </div>
+                        <p class="text-lg pt-2">3 jam yang lalu</p>
                     </div>
-                    <p class="text-lg pt-2">3 jam yang lalu</p>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
-                <div class="flex justify-between pb-4 pt-10">
-                    <div class="flex ">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
-                        <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
+                    <div class="flex justify-between pb-4 pt-10">
+                        <div class="flex ">
+                            <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
+                            <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                        </div>
+                        <p class="text-lg pt-2">3 jam yang lalu</p>
                     </div>
-                    <p class="text-lg pt-2">3 jam yang lalu</p>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
-                <div class="flex justify-between pb-4 pt-10">
-                    <div class="flex ">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
-                        <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
+                    <div class="flex justify-between pb-4 pt-10">
+                        <div class="flex ">
+                            <img src="https://flowbite.com/docs/images/logo.svg" class="h-12 " alt="Flowbite Logo">
+                            <h3 class="text-2xl pt-1 ps-5 ">Mohamad Aswad Supu</h3>
+                        </div>
+                        <p class="text-lg pt-2">3 jam yang lalu</p>
                     </div>
-                    <p class="text-lg pt-2">3 jam yang lalu</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
+                    
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam delectus nihil, alias atque recusandae voluptas ducimus debitis facilis ratione sequi. Odio magnam sapiente, perspiciatis vero facere ipsam molestias nemo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, aspernatur? Repellat, laboriosam odit at porro facere quasi quae officia iste non quos iusto aut provident sint corporis modi. Libero, odio?</p>
-                
             </div>
+            
         </div>
     </div>
 </section>

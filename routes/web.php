@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PengunjungController;
+use App\Http\Controllers\Ulasan;
+use App\Http\Controllers\UlasanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +23,4 @@ Route::get('/home', function () {
     return view('home');
 });
 Route::resource('pengunjung', PengunjungController::class);
+Route::resource('pengunjung/ulasan', UlasanController::class);
