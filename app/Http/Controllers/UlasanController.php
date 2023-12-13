@@ -13,7 +13,10 @@ class UlasanController extends Controller
      */
     public function index()
     {
-        //
+        $puas = Ulasan::where('reaksi', 'puas')->count();
+        $tidakpuas = Ulasan::where('reaksi', 'tidak puas')->count();
+
+        return view('pengunjung/home_index', compact('puas', 'tidakpuas'));
     }
 
     /**
@@ -29,7 +32,14 @@ class UlasanController extends Controller
      */
     public function store(StoreUlasanRequest $request)
     {
-        return $request;
+
+        $validasi = $request->validate([
+            'nama' => 'required|unique:ulasans,nama|string|max:255',
+            'ulasan' => 'required|string|max:255',
+        ]);
+        Ulasan::create($validasi);
+
+        return redirect('/pengunjung#form');
     }
 
     /**

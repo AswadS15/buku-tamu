@@ -23,4 +23,4 @@ Route::get('/home', function () {
     return view('home');
 });
 Route::resource('pengunjung', PengunjungController::class);
-Route::resource('pengunjung/ulasan', UlasanController::class);
+Route::get('pengunjung/pelayanan', [PengunjungController::class, 'Pelayanan']);
