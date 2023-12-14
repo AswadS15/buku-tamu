@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivisiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelayananController;
 use App\Http\Controllers\PengunjungController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +28,5 @@ Route::resource('home', PengunjungController::class);
 
 Route::resource('pengunjung', PelayananController::class);
 Route::resource('divisi', DivisiController::class);
+Route::resource('dashboard', DashboardController::class);
 // Route::get('pengunjung/pelayanan', [PengunjungController::class, 'Pelayanan']);

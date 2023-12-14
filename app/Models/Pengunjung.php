@@ -9,15 +9,9 @@ class Pengunjung extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $fillable = ['id_divisi', 'nama', 'alamat', 'nomor', 'tujuan'];
 
-
-    public function Pesan()
-    {
-        return $this->hasMany(Pesan::class);
-    }
-
-    public function Divisi()
+    public function divisi()
     {
         return $this->belongsTo(Divisi::class, 'id_divisi');
     }
