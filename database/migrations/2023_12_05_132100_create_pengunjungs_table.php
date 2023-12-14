@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('pengunjungs', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_divisi');
+            $table->foreign('id_divisi')->references('id')->on('pengunjungs')->onDelete('cascade');
             $table->string('nama');
             $table->string('instansi')->nullable();
             $table->string('alamat')->nullable();
-            $table->string('no_handphone');
-            $table->string('sub-bab');
-            $table->string('tujuan');
+            $table->string('hp');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

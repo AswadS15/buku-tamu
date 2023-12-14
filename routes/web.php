@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\PengunjungController;
-use App\Http\Controllers\Ulasan;
-use App\Http\Controllers\UlasanController;
+use App\Http\Controllers\DivisiController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PelayananController;
+use App\Http\Controllers\PengunjungController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', function () {
-    return view('home');
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
 });
-Route::resource('pengunjung', PengunjungController::class);
-Route::get('pengunjung/pelayanan', [PengunjungController::class, 'Pelayanan']);
+Route::resource('home', PengunjungController::class);
+
+Route::resource('pengunjung', PelayananController::class);
+Route::resource('divisi', DivisiController::class);
+// Route::get('pengunjung/pelayanan', [PengunjungController::class, 'Pelayanan']);

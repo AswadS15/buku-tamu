@@ -16,7 +16,7 @@ class UlasanController extends Controller
         $puas = Ulasan::where('reaksi', 'puas')->count();
         $tidakpuas = Ulasan::where('reaksi', 'tidak puas')->count();
 
-        return view('pengunjung/home_index', compact('puas', 'tidakpuas'));
+        return view('home.index', compact('puas', 'tidakpuas'));
     }
 
     /**
@@ -24,7 +24,7 @@ class UlasanController extends Controller
      */
     public function create()
     {
-        return view('pengunjung.home_index');
+        return view('home.index');
     }
 
     /**
@@ -39,7 +39,7 @@ class UlasanController extends Controller
         ]);
         Ulasan::create($validasi);
 
-        return redirect('/pengunjung#form');
+        return redirect('/home#index');
     }
 
     /**

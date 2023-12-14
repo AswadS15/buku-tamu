@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pesan;
+use App\Models\Divisi;
 use App\Models\Ulasan;
 use App\Models\Pengunjung;
 use App\Http\Requests\StorePengunjungRequest;
@@ -20,8 +22,9 @@ class PengunjungController extends Controller
         $puas = Ulasan::where('reaksi', 'puas')->count();
         $tidakpuas = Ulasan::where('reaksi', 'tidak puas')->count();
         $pelayanan = Pengunjung::all();
+        $divisi = Divisi::all();
 
-        return view('pengunjung/home_index', compact('hari', 'hari2', 'hari3', 'puas', 'tidakpuas', 'pelayanan'));
+        return view('home.index', compact('hari', 'hari2', 'hari3', 'puas', 'tidakpuas', 'pelayanan', 'divisi'));
     }
 
     /**
@@ -37,18 +40,47 @@ class PengunjungController extends Controller
      */
     public function store(StorePengunjungRequest $request)
     {
-        $validasi = $request->validate([
-            'nama' => 'required|unique:pengunjungs,nama|string|max:255',
-            'instansi' => 'required|string|max:255',
-            'alamat' => 'required|string|max:255',
-            'no_handphone' => 'required|string|regex:/^0\d{9,12}$/',
-            'sub-bagian' => 'required',
-            'tujuan' => 'required|string|max:255',
-        ]);
+        $nama = $request->nama;
+        $instansi = $request->instansi;
+        $alamat = $request->alamat;
+        $hp = $request->hp;
+        $divisi = $request->divisi;
+        $data = $request->data;
 
-        Pengunjung::create($validasi);
 
-        return redirect('/pengunjung#form');
+
+
+        if (Pengunjung::where('hp', $hp)->exists()) {
+
+            $idpengunjung = Pengunjung::where('hp', $hp)
+                ->value('id');
+
+            $pesan = new Pesan();
+            $pesan->id_pengunjungs = $idpengunjung;
+            $pesan->data = $request->data;
+            $pesan->save();
+            return redirect('home');
+        } else {
+
+            $data = new Pengunjung();
+            $data->nama = $nama;
+            $data->instansi = $instansi;
+            $data->alamat = $alamat;
+            $data->hp = $hp;
+            $data->id_divisi = $divisi;
+            $data->save();
+
+            $idpengunjung = Pengunjung::where('hp', $hp)
+                ->value('id');
+
+            $pesan = new Pesan();
+            $pesan->id_pengunjungs = $idpengunjung;
+            $pesan->data = $request->data;
+            $pesan->save();
+
+
+            return redirect('home');
+        }
     }
 
     /**

@@ -13,7 +13,9 @@ class DivisiController extends Controller
      */
     public function index()
     {
-        //
+        $divisi = Divisi::paginate(5);
+
+        return view('divisi.index', compact('divisi'));
     }
 
     /**
@@ -35,9 +37,10 @@ class DivisiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Divisi $divisi)
+    public function show($id)
     {
-        //
+        $divisi = Divisi::find($id);
+        return view('divisi.detail', compact('divisi'));
     }
 
     /**
