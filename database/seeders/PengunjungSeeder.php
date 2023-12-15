@@ -12,6 +12,5 @@ class PengunjungSeeder extends Seeder
      */
     public function run(): void
     {
-        //
     }
 }

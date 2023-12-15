@@ -4,8 +4,6 @@
    <div class="p-4  rounded-lg dark:border-gray-700 mt-16 md:mt-0">
       <h1 class="text-2xl text-emerald-700 font-bold">Dashboard</h1>
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
-
-
       <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
          <div class="sm:hidden">
             <label for="tabs" class="sr-only">Select tab</label>
@@ -28,7 +26,8 @@
          </ul>
          <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
             <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
-               <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+               <button onclick="saveChartAsJPG()">Save as JPG</button>
+               <div class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
                   <canvas id="myChart"></canvas>
                </dl>
             </div>
@@ -126,21 +125,61 @@
 @section('js')
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-to-image"></script>
 
 <script>
-   const ctx = document.getElementById('myChart');
+   // Get the canvas element
+   var ctx = document.getElementById('myChart').getContext('2d');
  
-   new Chart(ctx, {
+   // Define your data
+   var data = {
+     labels: ['Tata Usaha', 'ISDHTL', 'PKH'],
+     datasets: [{
+       label: 'Jumlah Data Berdasarkan Divisi',
+       backgroundColor: [
+         'rgba(255, 99, 132, 0.2)',
+         'rgba(54, 162, 235, 0.2)',
+         'rgba(153, 102, 255, 0.2)',
+     
+       ],
+       borderColor: [
+         'rgb(255, 99, 132)',
+         'rgb(54, 162, 235)',
+         'rgb(153, 102, 255)',
+       ],
+       borderWidth: 1,
+       data: [{{ $tatausaha }}, {{ $isdhtl }}, {{ $pkh }}],
+     }]
+   };
+ 
+   // Configure the options
+   var options = {
+     scales: {
+       y: {
+         beginAtZero: true
+       }
+     }
+   };
+ 
+   // Create the chart
+   var myChart = new Chart(ctx, {
      type: 'bar',
-     data: {
-       labels: ['Tata Usaha', 'ISDHTL', 'PKH'],
-       datasets: [{
-         label: '# of Votes',
-         data: [{{ $tatausaha }},{{ $isdhtl }}, {{ $pkh }},],
-
-       }]
-     },
+     data: data,
+     options: options
    });
+  // Fungsi untuk menyimpan grafik sebagai JPG
+  function saveChartAsJPG() {
+     Chart.toImage(myChart, 'image/jpeg', 1.0).then(function (dataUrl) {
+       var link = document.createElement('a');
+       link.href = dataUrl;
+       link.download = 'chart.jpg';
+       link.click();
+     });
+   }
+   
  </script>
+
+ 
+ 
 
 @endsection

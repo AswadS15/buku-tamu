@@ -3,20 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pesan;
-use App\Models\Pengunjung;
 use Illuminate\Http\Request;
 
-class PelayananController extends Controller
+class PesanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $pengunjung = Pengunjung::with('divisi')->paginate(5);
+        $pesan = Pesan::with('pengunjung')->paginate(5);
 
 
-        return view('pengunjung.index', compact('pengunjung'));
+        return view('pesan.index', compact('pesan'));
     }
 
     /**
@@ -40,8 +39,8 @@ class PelayananController extends Controller
      */
     public function show(string $id)
     {
-        $pengunjung = Pengunjung::find($id);
-        return view('pengunjung.detail', compact('pengunjung'));
+        $pesan = Pesan::find($id);
+        return view('pesan.detail', compact('pesan'));
     }
 
     /**
@@ -49,6 +48,7 @@ class PelayananController extends Controller
      */
     public function edit(string $id)
     {
+        //
     }
 
     /**
@@ -64,9 +64,6 @@ class PelayananController extends Controller
      */
     public function destroy(string $id)
     {
-        $pengunjung = Pengunjung::find($id);
-        $pengunjung->delete();
-
-        return redirect()->route('pengunjung.index')->with('status', 'Data Jenis Tujuan Berhasil Dihapus');
+        //
     }
 }

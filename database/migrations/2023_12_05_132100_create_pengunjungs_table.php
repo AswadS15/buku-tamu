@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pengunjungs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_divisi');
+            $table->unsignedBigInteger('id_divisi')->default(0);
             $table->foreign('id_divisi')->references('id')->on('pengunjungs')->onDelete('cascade');
             $table->string('nama');
             $table->string('instansi')->nullable();

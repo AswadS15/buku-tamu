@@ -299,11 +299,19 @@
         <div class="max-w-screen mx-auto px-5 grid grid-cols-2 gap-10">
             <div class="col-span-1">
                 <h3 class="text-white text-xl font-semibold  pb-2"> Visi</h3>
-                <p class="text-white font-sans">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum obcaecati quibusdam omnis alias eum numquam? Maxime odit laudantium minus, quasi officia praesentium laboriosam molestiae corporis temporibus ex odio vero beatae!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis incidunt iste commodi, tenetur, voluptate eveniet a nobis cumque dignissimos eligendi itaque error. Dolor perferendis natus, quasi dolorem sed ut saepe?</p>
+                <p class="text-white font-sans">"Terwujudnya pemantapan kawasan hutan dan penataan lingkungan hidup secara partisipatif dan berkelanjutan sebagai prakondisi pembangunan nasional" dalam mendukung:
+                    Terwujudnya Keberlanjutan Sumber Daya Hutan dan Lingkungan Hidup untuk Kesejahteraan Masyarakat
+                </p>
             </div>  
             <div class="col-span-1">
                 <h3 class="text-white text-xl font-semibold pb-2"> Misi</h3>
-                <p class="text-white font-sans">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum obcaecati quibusdam omnis alias eum numquam? Maxime odit laudantium minus, quasi officia praesentium laboriosam molestiae corporis temporibus ex odio vero beatae!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis incidunt iste commodi, tenetur, voluptate eveniet a nobis cumque dignissimos eligendi itaque error. Dolor perferendis natus, quasi dolorem sed ut saepe?</p>
+                <p class="text-white font-sans">Dengan memperhatikan Misi Presiden dan Wakil Presiden serta berpedoman pada tugas, fungsi dan kewenangan KLHK, sebagaimana telah di tetapkan dalam undang-undang nomor 41 tahun 1999 tentang Kehutanan dan Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup serta Peraturan Presiden Nomor 16 Tahun 2015 Tentang Kementrian Lingkungan Hidup dan Kehutanan, maka misi BPKH Wilayah XV Gorontalo:
+                    <br>
+                    1.	Mewujudkan pemantapan Kawasan melalui Inventarisasi Hutan, Pengukuhan Kawasan hutan dan Penatagunaan Kawasan Hutan dan penyusun Rencana kehutanan dalam mendukung terwujudnya hutan yang Lestari;
+                    <br>
+                    2.	Mewujudkan pengendalian penggunaan Kawasan hutan dalam mendukung terwujudnya optimalisasi pemanfaatan ekonomi sumber daya hutan dan lingkungan secara berkeadilan dan berkelanjutan;
+                    <br>
+                    3.	Meningkatnya Tata Kelola Pemerintahan di BPKH Wilayah XV Gorontalo sesuai Kerangka Reformasi Birokrasi dalam mendukung terwujudnya tata Kelola pemerintahan yang baik.</p>
             </div>               
             
         </div>
