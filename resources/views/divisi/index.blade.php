@@ -2,7 +2,7 @@
 @section('isi')
 <div class=" sm:ml-64 bg-white rounded-t-xl h-screen">
       <div class="p-4  rounded-lg dark:border-gray-700 mt-16 md:mt-0">
-         <h1 class="text-2xl text-emerald-700 font-bold">Data Divisi</h1>
+         <h1 class="text-2xl text-emerald-700 font-bold  px-3 py-3 border-b">Data Divisi</h1>
          <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
             
 
