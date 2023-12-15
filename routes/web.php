@@ -23,13 +23,15 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// });
 Route::resource('home', PengunjungController::class);
 
-Route::resource('dashboard', DashboardController::class);
+Route::resource('dashboard', DashboardController::class)->middleware('auth');
 Route::resource('pengunjung', PelayananController::class);
 Route::resource('divisi', DivisiController::class);
 Route::resource('pesan', PesanController::class);
 // Route::get('pengunjung/pelayanan', [PengunjungController::class, 'Pelayanan']);
+
+require __DIR__ . '/auth.php';
